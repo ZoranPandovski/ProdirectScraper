@@ -1,14 +1,19 @@
 import scrapy
 from jinja2 import Template
 from ..emailer import send_mail
+from ..helpers import config_section
 
+SIZE = config_section("trainers_spider")['size']
+CURRENCY = config_section("trainers_spider")['currency']
 class TrainersSpider(scrapy.Spider):
     name = 'trainers'
     home_url = 'http://www.prodirectselect.com'
     start_urls = \
-        [home_url + '/lists/trainers.aspx?listName=trainers&cur=EUR&pp=96&o=lth&s=7,8']
+        [home_url + '/lists/trainers.aspx?listName=trainers&cur=' +
+         CURRENCY + '&pp=96&o=lth&s=' + SIZE ]
 
     def parse(self, response):
+        print self.start_urls
         collection = []
         for item in response.css('div.list div.item'):
             trainers = {
