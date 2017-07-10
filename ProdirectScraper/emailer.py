@@ -14,9 +14,10 @@ def send_mail(body):
     port = str(h.config_section("mailer")['smtp_port'])
     mailer = MailSender(server, mail_from, user, password, int(port), False,
                         False)
+    recipient = str(h.config_section("mailer")['mail_to'])
     try:
-        resp = mailer.send(to='zoran.pandovski@gmail.com', subject='Some subject',
-                body=body, mimetype='text/html')
+        resp = mailer.send(to=recipient,
+                    subject='Prodirect trainers', body=body, mimetype='text/html')
         return resp
     except:
         print resp

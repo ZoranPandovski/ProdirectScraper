@@ -5,15 +5,22 @@ from ..helpers import config_section
 
 SIZE = config_section("trainers_spider")['size']
 CURRENCY = config_section("trainers_spider")['currency']
+
+
 class TrainersSpider(scrapy.Spider):
     name = 'trainers'
     home_url = 'http://www.prodirectselect.com'
     start_urls = \
         [home_url + '/lists/trainers.aspx?listName=trainers&cur=' +
-         CURRENCY + '&pp=96&o=lth&s=' + SIZE ]
+         CURRENCY + '&pp=96&o=lth&s=' + SIZE]
 
     def parse(self, response):
-        print self.start_urls
+        '''
+        Will be called to handle the response downloaded for each of the
+        requests made.
+        :param response:  holds the page content
+        :return:
+        '''
         collection = []
         for item in response.css('div.list div.item'):
             trainers = {
@@ -39,4 +46,3 @@ class TrainersSpider(scrapy.Spider):
         """)
         table = template.render(items=collection)
         send_mail(table.encode('utf-8'))
-
