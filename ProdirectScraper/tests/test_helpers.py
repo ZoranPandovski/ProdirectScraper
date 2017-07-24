@@ -14,15 +14,27 @@ class TestConfigOptions(unittest.TestCase):
         for size in sizes:
             self.assertTrue(4 <= int(size) <= 14)
 
+    def test_config_section_currency(self):
+        #arrange
+        currencies = ['EUR', 'USD', 'GBP']
+        flag = False
+
+        #act
+        config_curr = h.config_section("trainers_spider")['currency']
+        if config_curr in currencies:
+            flag = True
+
+        #assert
+        self.assertTrue(flag)
+
     def test_config_section_mailer(self):
         #arrange
-        to = 'zoran.pandovski@gmail.com'
 
         #act
         config_to = h.config_section("mailer")['mail_to']
 
         #assert
-        self.assertEqual(to, config_to)
+        self.assertIsNot(config_to, '')
 
 if __name__ == '__main__':
     unittest.main()
