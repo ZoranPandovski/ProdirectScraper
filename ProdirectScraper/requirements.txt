@@ -1,0 +1,4 @@
+Twisted==14.0
+lxml==3.4
+pyOpenSSL==0.14
+Scrapy==1.4.0
