@@ -8,7 +8,7 @@ def config_section(section):
     :return:
     '''
     config = configparser.ConfigParser()
-    config.read("ProdirectScraper/configuration.ini")
+    config.read("configuration.ini")
     dict1 = {}
     options = config.options(section)
     for option in options:
