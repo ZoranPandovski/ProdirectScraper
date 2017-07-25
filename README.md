@@ -21,3 +21,23 @@ Inside virtual env install ProdirectScraper dependencies:
 ```
 pip install -r requirements.txt
 ```
+
+## Config Settings
+
+These are the required configuration options :
+```
+#avaiable size are from 4 to 12, e.g 4 or 4,5,10
+size =
+# avaiable currency EUR,USD,GBP
+currency = 
+smtp_host =
+mail_from =
+mail_to = 
+smtp_user =
+smtp_pass =
+smtp_port =
+smtp_tls =
+smtp_ssl =
+
+```
+
