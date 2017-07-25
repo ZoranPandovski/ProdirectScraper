@@ -1,6 +1,7 @@
 from scrapy.mail import MailSender
 import helpers as h
 
+
 def send_mail(body):
     '''Sends email
           :param body: The body of mail.
