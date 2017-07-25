@@ -30,6 +30,7 @@ These are the required configuration options :
 size =
 # avaiable currency EUR,USD,GBP
 currency = 
+# mailer configuration options
 smtp_host =
 mail_from =
 mail_to = 
@@ -40,4 +41,12 @@ smtp_tls =
 smtp_ssl =
 
 ```
+## Runing the Spiders
 
+To put our spider to work, go to the project’s top level directory and run:
+
+```
+scrapy crawl trainers
+```
+
+This command runs the spider with name trainers , that will crawl http://www.prodirectselect.com/ website and send mail with lowest prices, model description and link to trainers, which size is specified in configuration.ini 
