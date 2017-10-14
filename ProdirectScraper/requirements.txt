@@ -3,3 +3,4 @@ lxml==3.4
 pyOpenSSL==17.3.0
 Scrapy==1.4.0
 Jinja2==2.7
+configparser==3.5.0
