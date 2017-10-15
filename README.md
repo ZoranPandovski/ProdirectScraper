@@ -23,8 +23,13 @@ pip install -r requirements.txt
 ```
 
 ## Config Settings
-These are the basic options needed in order to send the email:
+These are the basic options:
 ```
+# available currency EUR,USD,GBP
+currency =
+# Number of pieces to display in the email
+pp =
+
 # mailer configuration options
 smtp_host =
 mail_from =
@@ -37,20 +42,18 @@ smtp_ssl =
 ```
 
 After that edit the configuration specific to the category of product you would like to scrape.
+
 For trainers:
 ```
-#avaiable size are from 4 to 12, e.g 4 or 4,5,10
+#available sizes are from 4 to 12, e.g 4 or 4,5,10
 size =
-# avaiable currency EUR,USD,GBP
-currency =
+
 ```
 
 For men's clothing:
 ```
 # available options:  One size, ONE-SIZE, S/M, L/XL, S, M, L, XL, XXL
 size =
-# avaiable currency EUR,USD,GBP
-currency =
 ```
 
 
