@@ -6,7 +6,7 @@ from ..helpers import config_section
 SIZE = config_section("mensclothing_spider")['size']
 CURRENCY = config_section("mensclothing_spider")['currency']
 
-class TrainersSpider(scrapy.Spider):
+class MensClothingSpider(scrapy.Spider):
     name = 'mensclothing'
     home_url = 'http://www.prodirectselect.com/'
     start_urls = \
