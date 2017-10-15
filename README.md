@@ -56,6 +56,12 @@ For men's clothing:
 size =
 ```
 
+For women's clothing:
+```
+# available options: OSFM,One Size,8,10,12,14,16,7 - 10,4½ - 7½,ONE-SIZE,32C,6,3½,4,4½,5,5½,6½,7,7½,XXS,XS,S,M,L,XL
+size =
+```
+
 
 ## Runing the Spiders
 
