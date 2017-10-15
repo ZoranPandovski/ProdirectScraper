@@ -7,8 +7,8 @@ PP = config_section("general")['pp']
 
 
 class MensClothingSpider(PageSpider):
-    name = 'mensclothing'
+    name = 'womensclothing'
     start_urls = \
-        [PageSpider + 'lists/mens-clothing.aspx?listName=mens-clothing&cur=' +
-         CURRENCY + '&pp=' + PP + '&o=lth&s=' + SIZE]
+        [PageSpider.home_url + 'lists/womens-clothing.aspx?listName=mens-clothing&cur=' +
+         CURRENCY + '&pp=32&pp=' + PP + '&o=lth&s=' + SIZE]
 
