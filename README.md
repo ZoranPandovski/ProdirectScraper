@@ -73,5 +73,6 @@ scrapy crawl SCRAPER
 where "SCRAPER" must be one of the following:
 - trainers
 - mensclothing
+- womensclothing
 
 This command runs the spider with name trainers , that will crawl http://www.prodirectselect.com/ website and send mail with lowest prices, model description and link to trainers, which size is specified in configuration.ini 
