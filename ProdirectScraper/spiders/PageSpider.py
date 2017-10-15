@@ -4,6 +4,7 @@ from ..emailer import send_mail
 
 
 class PageSpider(scrapy.Spider):
+    home_url = 'http://www.prodirectselect.com/'
 
     def parse(self, response):
         '''

@@ -6,8 +6,8 @@ CURRENCY = config_section("mensclothing_spider")['currency']
 
 
 class MensClothingSpider(PageSpider):
-    name = 'mensclothing'
+    name = 'womensclothing'
     start_urls = \
-        [PageSpider + 'lists/mens-clothing.aspx?listName=mens-clothing&cur=' +
+        [PageSpider.home_url + 'lists/womens-clothing.aspx?listName=mens-clothing&cur=' +
          CURRENCY + '&pp=32&pp=96&o=lth&s=' + SIZE]
 
