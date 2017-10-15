@@ -23,30 +23,46 @@ pip install -r requirements.txt
 ```
 
 ## Config Settings
-
-These are the required configuration options :
+These are the basic options needed in order to send the email:
 ```
-#avaiable size are from 4 to 12, e.g 4 or 4,5,10
-size =
-# avaiable currency EUR,USD,GBP
-currency = 
 # mailer configuration options
 smtp_host =
 mail_from =
-mail_to = 
+mail_to =
 smtp_user =
 smtp_pass =
 smtp_port =
 smtp_tls =
 smtp_ssl =
-
 ```
+
+After that edit the configuration specific to the category of product you would like to scrape.
+For trainers:
+```
+#avaiable size are from 4 to 12, e.g 4 or 4,5,10
+size =
+# avaiable currency EUR,USD,GBP
+currency =
+```
+
+For men's clothing:
+```
+# available options:  One size, ONE-SIZE, S/M, L/XL, S, M, L, XL, XXL
+size =
+# avaiable currency EUR,USD,GBP
+currency =
+```
+
+
 ## Runing the Spiders
 
 To put our spider to work, go to the project’s top level directory and run:
 
 ```
-scrapy crawl trainers
+scrapy crawl SCRAPER
 ```
+where "SCRAPER" must be one of the following:
+- trainers
+- mensclothing
 
 This command runs the spider with name trainers , that will crawl http://www.prodirectselect.com/ website and send mail with lowest prices, model description and link to trainers, which size is specified in configuration.ini 
