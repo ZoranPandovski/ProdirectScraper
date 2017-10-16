@@ -1,0 +1,14 @@
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+install:  
+  - pip install -r ProdirectScraper/requirements.txt
+  - pip install pytest
+  - pip install coveralls
+# command to run tests
+script:
+  - py.test -v --color=yes --exitfirst --showlocals --durations=5
+  - python ProdirectScraper/tests/test_helpers.py
+after_success:
+  - coveralls
