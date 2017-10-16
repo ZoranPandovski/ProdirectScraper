@@ -19,10 +19,14 @@ class PageSpider(scrapy.Spider):
                 'Price ': item.css('p.price::text').extract_first(),
                 'Description ': item.css('a::text').extract_first(),
                 'More info ': self.home_url +
-                              item.css('a::attr(href)').extract_first()
+                item.css('a::attr(href)').extract_first()
             }
             collection.append(trainers)
 
+        formatted_items = self.format_items(collection)
+        send_mail(formatted_items.encode('utf-8'))
+
+    def format_items(self, items):
         template = Template("""
         <table>
             {% for item in items %}
@@ -36,5 +40,5 @@ class PageSpider(scrapy.Spider):
             {% endfor %}
         </table>
         """)
-        table = template.render(items=collection)
-        send_mail(table.encode('utf-8'))
+        formatted_items = template.render(items=items)
+        return formatted_items
