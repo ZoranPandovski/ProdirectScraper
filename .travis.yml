@@ -7,6 +7,7 @@ install:
   - pip install pytest
   - pip install coveralls
 # command to run tests
+before_script: cd ProdirectScraper
 script:
   - py.test -v --color=yes --exitfirst --showlocals --durations=5
   - python -m tests.test_helpers.py
