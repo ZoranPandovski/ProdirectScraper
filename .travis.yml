@@ -9,6 +9,6 @@ install:
 # command to run tests
 script:
   - py.test -v --color=yes --exitfirst --showlocals --durations=5
-  - python ProdirectScraper/tests/test_helpers.py
+  - python -m tests.test_helpers.py
 after_success:
   - coveralls
