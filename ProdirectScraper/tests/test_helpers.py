@@ -1,5 +1,5 @@
 import unittest
-from ..helpers import config_section
+from helpers import config_section
 
 
 class TestConfigOptions(unittest.TestCase):
