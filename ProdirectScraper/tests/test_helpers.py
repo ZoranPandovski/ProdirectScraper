@@ -21,7 +21,7 @@ class TestConfigOptions(unittest.TestCase):
         flag = False
 
         #act
-        config_curr = config_section("trainers_spider")['currency']
+        config_curr = config_section("general")['currency']
         if config_curr in currencies:
             flag = True
 
