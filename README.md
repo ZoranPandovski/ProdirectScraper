@@ -1,5 +1,6 @@
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/ZoranPandovski/ProdirectScraper.svg?branch=master)](https://github.com/ZoranPandovski/ProdirectScraper)
+[![Coverage Status](https://coveralls.io/repos/github/ZoranPandovski/ProdirectScraper/badge.svg?branch=master)](https://coveralls.io/github/ZoranPandovski/ProdirectScraper?branch=master)
 # ProdirectScraper
 
 ## Instalation
