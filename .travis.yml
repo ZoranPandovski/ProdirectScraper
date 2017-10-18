@@ -4,11 +4,10 @@ python:
 # command to install dependencies
 install:  
   - pip install -r ProdirectScraper/requirements.txt
-  - pip install pytest
   - pip install coveralls
 # command to run tests
 before_script: cd ProdirectScraper
 script:
-  - python -m tests.test_helpers
+  - python -m tests.test_helpers coveralls -v --cov coveralls --cov-report
 after_success:
   - coveralls
