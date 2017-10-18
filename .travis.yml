@@ -8,6 +8,6 @@ install:
 # command to run tests
 before_script: cd ProdirectScraper
 script:
-  - python -m tests.test_helpers -cover-package=ProdirectScraper --cover-inclusive --cover-erase --cover-tests
+  - python -m tests.test_helpers 
 after_success:
   - coveralls
