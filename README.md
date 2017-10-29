@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/ZoranPandovski/ProdirectScraper/badge.svg?branch=master)](https://coveralls.io/github/ZoranPandovski/ProdirectScraper?branch=master)
 # ProdirectScraper
 
-## Instalation
+## Installation
 
 Installing Scrapy inside a virtual environment on all platforms.
 
@@ -66,7 +66,7 @@ size =
 ```
 
 
-## Runing the Spiders
+## Running the Spiders
 
 To put our spider to work, go to the project’s top level directory and run:
 
@@ -78,4 +78,4 @@ where "SCRAPER" must be one of the following:
 - mensclothing
 - womensclothing
 
-This command runs the spider with name trainers , that will crawl http://www.prodirectselect.com/ website and send mail with lowest prices, model description and link to trainers, which size is specified in configuration.ini 
+This command runs the spider with name trainers, that will crawl http://www.prodirectselect.com/ website and send mail with lowest prices, model description and link to trainers, which size is specified in configuration.ini 
