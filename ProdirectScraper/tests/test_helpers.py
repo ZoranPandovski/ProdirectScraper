@@ -1,5 +1,5 @@
 import unittest
-from helpers import config_section
+import helpers
 
 
 class TestConfigOptions(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestConfigOptions(unittest.TestCase):
         #arrange
 
         #act
-        config_size = config_section("trainers_spider")['size']
+        config_size = helpers.config_section("trainers_spider")['size']
         sizes = config_size.split(",")
 
         #assert
@@ -21,7 +21,7 @@ class TestConfigOptions(unittest.TestCase):
         flag = False
 
         #act
-        config_curr = config_section("general")['currency']
+        config_curr = helpers.config_section("general")['currency']
         if config_curr in currencies:
             flag = True
 
@@ -32,7 +32,7 @@ class TestConfigOptions(unittest.TestCase):
         #arrange
 
         #act
-        config_to = config_section("mailer")['mail_to']
+        config_to = helpers.config_section("mailer")['mail_to']
 
         #assert
         self.assertIsNot(config_to, '')
