@@ -6,7 +6,7 @@ from ..spiders.PageSpider import PageSpider
 
 class TestPageSpider(unittest.TestCase):
     def setUp(self):
-        self.page_spider = PageSpider('TestPageSpider')
+        self.page_spider = PageSpider.PageSpider('TestPageSpider')
 
     def test_format_items(self):
         parsed_items = [
