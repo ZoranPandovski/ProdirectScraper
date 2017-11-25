@@ -1,7 +1,7 @@
 import unittest
 import re
 
-from ..spiders.PageSpider import PageSpider
+import spiders.PageSpider as PageSpider
 
 
 class TestPageSpider(unittest.TestCase):
