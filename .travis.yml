@@ -8,6 +8,9 @@ install:
 # command to run tests
 before_script: cd ProdirectScraper
 script:
-  - coverage run -m unittest tests.test_helpers
+  - coverage run -m -p unittest tests.test_helpers
+  - coverage run -m -p unittest tests.test_page_spider
+  - coverage combine
+  - coverage report -m
 after_success:
   - coveralls
