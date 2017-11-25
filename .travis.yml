@@ -1,10 +1,12 @@
 language: python
 python:
   - "2.7"
+cache: pip
 # command to install dependencies
 install:  
   - pip install -r ProdirectScraper/requirements.txt
   - pip install coveralls
+  - pip install  coverage
 # command to run tests
 before_script: cd ProdirectScraper
 script:
