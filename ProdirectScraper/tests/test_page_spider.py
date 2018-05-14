@@ -4,7 +4,7 @@ import re
 import spiders.PageSpider as PageSpider
 
 
-def clean_html(self, html):
+def clean_html(html):
     '''
     remove whitespace between html tag
     '''
