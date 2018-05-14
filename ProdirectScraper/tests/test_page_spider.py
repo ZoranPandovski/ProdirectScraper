@@ -4,6 +4,13 @@ import re
 import spiders.PageSpider as PageSpider
 
 
+def clean_html(self, html):
+    '''
+    remove whitespace between html tag
+    '''
+    return re.sub(r'>\s+<', '><', html).strip()
+
+
 class TestPageSpider(unittest.TestCase):
     def setUp(self):
         self.page_spider = PageSpider.PageSpider('TestPageSpider')
@@ -26,11 +33,7 @@ class TestPageSpider(unittest.TestCase):
                 <li>Item 2</li>
             </ul>
         </table>'''
-        self.assertEqual(self.clean_html(self.page_spider.format_items(parsed_items)),
-                         self.clean_html(expected_format))
+        self.assertEqual(clean_html(self.page_spider.format_items(parsed_items)),
+                         clean_html(expected_format))
 
-    def clean_html(self, html):
-        '''
-        remove whitespace between html tag
-        '''
-        return re.sub(r'>\s+<', '><', html).strip()
+
