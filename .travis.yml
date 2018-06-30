@@ -4,7 +4,7 @@ python:
 cache: pip
 # command to install dependencies
 install:  
-  - pip install -r ProdirectScraper/requirements.txt
+  - pip install -r requirements.txt
   - pip install coveralls
   - pip install  coverage
 # command to run tests
