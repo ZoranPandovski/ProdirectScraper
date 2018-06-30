@@ -1,6 +1,6 @@
 Twisted==14.0
 lxml==3.4
 pyOpenSSL==17.3.0
-Scrapy==1.4.0
-Jinja2==2.7
+Scrapy==1.5.0
+Jinja2==2.7.2
 configparser==3.5.0
