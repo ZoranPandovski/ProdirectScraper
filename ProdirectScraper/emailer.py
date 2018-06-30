@@ -8,14 +8,14 @@ def send_mail(body):
           :type string:
     '''
     # convert to str to escape issue in twisted
-    server = str(helpers.config_section("mailer")['smtp_host'])
-    mail_from = str(helpers.config_section("mailer")['mail_from'])
-    user = str(helpers.config_section("mailer")['smtp_user'])
-    password = str(helpers.config_section("mailer")['smtp_pass'])
-    port = str(helpers.config_section("mailer")['smtp_port'])
+    server = helpers.config_section("mailer")['smtp_host']
+    mail_from = helpers.config_section("mailer")['mail_from']
+    user = helpers.config_section("mailer")['smtp_user']
+    password = helpers.config_section("mailer")['smtp_pass']
+    port = helpers.config_section("mailer")['smtp_port']
     mailer = MailSender(server, mail_from, user, password, int(port), False,
                         False)
-    recipient = str(helpers.config_section("mailer")['mail_to'])
+    recipient = helpers.config_section("mailer")['mail_to']
     try:
         resp = mailer.send(to=recipient,
                     subject='Prodirect trainers', body=body, mimetype='text/html')

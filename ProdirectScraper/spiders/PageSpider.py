@@ -1,6 +1,6 @@
 import scrapy
 from jinja2 import Template
-from emailer import send_mail
+from ..emailer import send_mail
 
 
 class PageSpider(scrapy.Spider):

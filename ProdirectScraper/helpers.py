@@ -13,7 +13,7 @@ def config_section(section):
     options = config.options(section)
     for option in options:
         try:
-            dict1[option] = config.get(section, option)
+            dict1[option] = str(config.get(section, option))
             if dict1[option] == -1:
                 continue
         except Exception as e:
