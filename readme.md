@@ -1,5 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a17cb028c594405e9235c724d6b45b50)](https://app.codacy.com/app/ZoranPandovski/ProdirectScraper?utm_source=github.com&utm_medium=referral&utm_content=ZoranPandovski/ProdirectScraper&utm_campaign=badger)
 [![BCH compliance](https://bettercodehub.com/edge/badge/ZoranPandovski/ProdirectScraper?branch=master)](https://bettercodehub.com/)
+[![Known Vulnerabilities](https://snyk.io/test/github/ZoranPandovski/ProdirectScraper/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/ZoranPandovski/ProdirectScraper?targetFile=requirements.txt)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/ZoranPandovski/ProdirectScraper.svg?branch=master)](https://github.com/ZoranPandovski/ProdirectScraper)
 [![Coverage Status](https://coveralls.io/repos/github/ZoranPandovski/ProdirectScraper/badge.svg?branch=master)](https://coveralls.io/github/ZoranPandovski/ProdirectScraper?branch=master)
