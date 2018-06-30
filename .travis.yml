@@ -8,10 +8,10 @@ install:
   - pip install coveralls
   - pip install  coverage
 # command to run tests
-before_script: cd ProdirectScraper/tests
+before_script: cd ProdirectScraper
 script:
-  - coverage run -m -p unittest test_helpers
-  - coverage run -m -p unittest test_page_spider
+  - coverage run -m -p unittest tests.test_helpers
+  - coverage run -m -p unittest tests.test_page_spider
   - coverage combine
   - coverage report -m
 after_success:
