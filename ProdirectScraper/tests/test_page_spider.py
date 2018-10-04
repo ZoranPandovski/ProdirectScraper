@@ -1,6 +1,6 @@
 import unittest
 import re
-
+from scrapy.http import HtmlResponse, Response, Request
 import spiders.PageSpider as PageSpider
 
 
@@ -14,6 +14,21 @@ def clean_html(html):
 class TestPageSpider(unittest.TestCase):
     def setUp(self):
         self.page_spider = PageSpider.PageSpider('TestPageSpider')
+
+    def test_parse(self):
+        body = '''
+            <div class="list"><div class="item">
+            <p class="price">hello</p>
+            <a href="foobar">hi</a>
+            </div>
+            </div>
+            '''
+        url='http://example.com'
+        request = Request(url=url)
+        response = HtmlResponse(url=url, request=request, body=unicode(body, 'utf-8'), encoding='utf-8')
+        actual = self.page_spider.parse_helper(response)
+        self.assertEqual(actual, [{'Price ': u'hello', 'More info ': u'http://www.prodirectselect.com/foobar', 'Description ': u'hi'}])
+
 
     def test_format_items(self):
         parsed_items = [
