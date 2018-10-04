@@ -13,6 +13,10 @@ class PageSpider(scrapy.Spider):
         :param response:  holds the page content
         :return:
         '''
+        formatted_items = self.format_items(self.parse_helper(response))
+        send_mail(formatted_items.encode('utf-8'))
+
+    def parse_helper(self, response):
         collection = []
         for item in response.css('div.list div.item'):
             trainers = {
@@ -23,8 +27,7 @@ class PageSpider(scrapy.Spider):
             }
             collection.append(trainers)
 
-        formatted_items = self.format_items(collection)
-        send_mail(formatted_items.encode('utf-8'))
+        return collection
 
     def format_items(self, items):
         template = Template("""
