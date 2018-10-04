@@ -1,6 +1,6 @@
 import unittest
 import re
-from scrapy.http import HtmlResponse, Response, Request
+from scrapy.http import HtmlResponse, Request
 import spiders.PageSpider as PageSpider
 
 
