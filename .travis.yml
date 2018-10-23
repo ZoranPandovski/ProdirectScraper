@@ -6,12 +6,13 @@ cache: pip
 install:  
   - pip install -r requirements.txt
   - pip install coveralls
-  - pip install  coverage
+  - pip install coverage
 # command to run tests
 before_script: cd ProdirectScraper
 script:
   - coverage run -m -p unittest tests.test_helpers
   - coverage run -m -p unittest tests.test_page_spider
+  - coverage run -m -p unittest tests.test_emailer
   - coverage combine
   - coverage report -m
 after_success:
