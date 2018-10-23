@@ -37,5 +37,6 @@ class TestConfigOptions(unittest.TestCase):
         #assert
         self.assertIsNot(config_to, '')
 
+
 if __name__ == '__main__':
     unittest.main()

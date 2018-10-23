@@ -4,3 +4,4 @@ pyOpenSSL==18.0.0
 Scrapy==1.5.1
 Jinja2==2.10.0
 configparser==3.5.0
+mock==2.0.0

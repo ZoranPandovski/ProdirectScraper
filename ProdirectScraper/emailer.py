@@ -20,5 +20,5 @@ def send_mail(body):
         resp = mailer.send(to=recipient,
                     subject='Prodirect trainers', body=body, mimetype='text/html')
         return resp
-    except Exception:
-        print(resp)
+    except Exception as e:
+        print e.message
