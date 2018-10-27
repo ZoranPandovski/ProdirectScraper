@@ -13,7 +13,7 @@ def send_mail(body):
     user = helpers.config_section("mailer")['smtp_user']
     password = helpers.config_section("mailer")['smtp_pass']
     port = helpers.config_section("mailer")['smtp_port']
-    mailer = MailSender(server, mail_from, user, password, int(port), False,
+    mailer = MailSender(server, mail_from, user, apassword, int(port), False,
                         False)
     recipient = helpers.config_section("mailer")['mail_to']
     try:
