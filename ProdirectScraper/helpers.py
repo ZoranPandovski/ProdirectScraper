@@ -1,6 +1,14 @@
 import configparser
 
 
+class Configuration:
+
+    def __init__(self, spider):
+        self.size = config_section(spider)['size']
+        self.currency =  config_section("general")['currency']
+        self.pp = config_section("general")['pp']
+
+
 def config_section(section):
     '''
     Read configuration properties
