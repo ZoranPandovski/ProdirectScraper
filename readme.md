@@ -2,7 +2,7 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/ZoranPandovski/ProdirectScraper?branch=master)](https://bettercodehub.com/)
 [![Known Vulnerabilities](https://snyk.io/test/github/ZoranPandovski/ProdirectScraper/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/ZoranPandovski/ProdirectScraper?targetFile=requirements.txt)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/ZoranPandovski/ProdirectScraper.svg?branch=master)](https://github.com/ZoranPandovski/ProdirectScraper)
+[![Build Status](https://travis-ci.org/ZoranPandovski/ProdirectScraper.svg?branch=master)](https://travis-ci.org/ZoranPandovski/ProdirectScraper)
 [![Coverage Status](https://coveralls.io/repos/github/ZoranPandovski/ProdirectScraper/badge.svg?branch=master)](https://coveralls.io/github/ZoranPandovski/ProdirectScraper?branch=master)
 # ProdirectScraper
 
