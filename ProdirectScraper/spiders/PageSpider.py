@@ -8,7 +8,7 @@ class PageSpider(scrapy.Spider):
 
     def parse(self, response):
         '''
-        Will be called to handle the response downloaded for each of the
+        Parse the response downloaded for each of the
         requests made.
         :param response:  holds the page content
         :return:
@@ -17,6 +17,11 @@ class PageSpider(scrapy.Spider):
         send_mail(formatted_items.encode('utf-8'))
 
     def parse_helper(self, response):
+        '''
+        Parse the html returned from spider
+        :param response:
+        :return: items list
+        '''
         collection = []
         for item in response.css('div.list div.item'):
             trainers = {
@@ -30,6 +35,11 @@ class PageSpider(scrapy.Spider):
         return collection
 
     def format_items(self, items):
+        '''
+        Create html table to display the items
+        :param items:
+        :return: Html table
+        '''
         template = Template("""
         <table>
             {% for item in items %}

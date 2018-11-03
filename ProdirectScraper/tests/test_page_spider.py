@@ -29,7 +29,6 @@ class TestPageSpider(unittest.TestCase):
         actual = self.page_spider.parse_helper(response)
         self.assertEqual(actual, [{'Price ': u'hello', 'More info ': u'http://www.prodirectselect.com/foobar', 'Description ': u'hi'}])
 
-
     def test_format_items(self):
         parsed_items = [
             {'Price': 1, 'Description': 'Item 1', 'More info': 'http://moreinfo-1'},

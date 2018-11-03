@@ -1,13 +1,10 @@
-from ..helpers import config_section
+from ..helpers import Configuration
 from .PageSpider import PageSpider
-
-SIZE = config_section("trainers_spider")['size']
-CURRENCY = config_section("general")['currency']
-PP = config_section("general")['pp']
 
 
 class TrainersSpider(PageSpider):
     name = 'trainers'
+    config = Configuration('trainers_spider')
     start_urls = \
         [PageSpider.home_url + '/lists/trainers.aspx?listName=trainers&cur=' +
-         CURRENCY + '&pp=' + PP + '&o=lth&s=' + SIZE]
+         config.currency + '&pp=' + config.pp + '&o=lth&s=' + config.size]
