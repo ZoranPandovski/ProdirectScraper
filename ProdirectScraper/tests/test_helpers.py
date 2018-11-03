@@ -37,6 +37,14 @@ class TestConfigOptions(unittest.TestCase):
         #assert
         self.assertIsNot(config_to, '')
 
+    def test_configuration(self):
+        #arrange
+
+        #act
+        config = helpers.Configuration('mensclothing_spider')
+
+        #assert
+        self.assertIsNot(config.size, '')
 
 if __name__ == '__main__':
     unittest.main()
