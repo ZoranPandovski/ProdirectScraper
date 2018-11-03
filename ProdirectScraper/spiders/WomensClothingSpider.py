@@ -1,14 +1,15 @@
-from ..helpers import config_section
+from ..helpers import Configuration
 from .PageSpider import PageSpider
 
-SIZE = config_section("mensclothing_spider")['size']
-CURRENCY = config_section("general")['currency']
-PP = config_section("general")['pp']
 
-
-class MensClothingSpider(PageSpider):
+class WomensClothingSpider(PageSpider):
+    '''
+       Spider that gets clothes for women's from http://www.prodirectselect.com
+    '''
     name = 'womensclothing'
+    config = Configuration('womensclothing_spider')
     start_urls = \
-        [PageSpider.home_url + 'lists/womens-clothing.aspx?listName=mens-clothing&cur=' +
-         CURRENCY + '&pp=32&pp=' + PP + '&o=lth&s=' + SIZE]
+        [PageSpider.home_url +
+         'lists/womens-clothing.aspx?listName=mens-clothing&cur=' +
+         config.currency + '&pp=32&pp=' + config.pp + '&o=lth&s='+ config.size]
 
