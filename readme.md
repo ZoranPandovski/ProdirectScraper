@@ -1,3 +1,4 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/7628ad67f9b52d2b1e66/maintainability)](https://codeclimate.com/github/ZoranPandovski/ProdirectScraper/maintainability)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a17cb028c594405e9235c724d6b45b50)](https://app.codacy.com/app/ZoranPandovski/ProdirectScraper?utm_source=github.com&utm_medium=referral&utm_content=ZoranPandovski/ProdirectScraper&utm_campaign=badger)
 [![BCH compliance](https://bettercodehub.com/edge/badge/ZoranPandovski/ProdirectScraper?branch=master)](https://bettercodehub.com/)
 [![Known Vulnerabilities](https://snyk.io/test/github/ZoranPandovski/ProdirectScraper/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/ZoranPandovski/ProdirectScraper?targetFile=requirements.txt)
