@@ -25,6 +25,6 @@ def config_section(section):
             if dict1[option] == -1:
                 continue
         except Exception as e:
-            print e.message
+            print(e.message)
             dict1[option] = None
     return dict1

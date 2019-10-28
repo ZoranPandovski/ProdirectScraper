@@ -1,5 +1,5 @@
 from scrapy.mail import MailSender
-import helpers
+from . import helpers
 
 
 def send_mail(body):
@@ -21,4 +21,4 @@ def send_mail(body):
                     subject='Prodirect trainers', body=body, mimetype='text/html')
         return resp
     except Exception as e:
-        print e.message
+        print(e.message)
