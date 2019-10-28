@@ -11,5 +11,5 @@ class WomensClothingSpider(PageSpider):
     start_urls = \
         [PageSpider.home_url +
          'lists/womens-clothing.aspx?listname=mens-clothing&cur=' +
-         config.currency + '&pp=32&pp=' + config.pp + '&o=lth&s='+ config.size]
+         config.currency + '&pp=32&pp=' + config.pp + '&o=lth&s='+ (config.size).replace(',','&s=')]
 

@@ -7,4 +7,4 @@ class TrainersSpider(PageSpider):
     config = Configuration('trainers_spider')
     start_urls = \
         [PageSpider.home_url + '/lists/trainers.aspx?listname=trainers&cur=' +
-         config.currency + '&pp=' + config.pp + '&o=lth&s=' + config.size]
+         config.currency + '&pp=' + config.pp + '&o=lth&s=' + (config.size).replace(',','&s=')]
