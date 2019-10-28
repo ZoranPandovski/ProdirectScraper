@@ -1,5 +1,5 @@
 from scrapy.mail import MailSender
-from . import helpers
+import helpers
 
 
 def send_mail(body):
