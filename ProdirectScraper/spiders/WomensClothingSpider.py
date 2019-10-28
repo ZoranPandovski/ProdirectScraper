@@ -10,6 +10,6 @@ class WomensClothingSpider(PageSpider):
     config = Configuration('womensclothing_spider')
     start_urls = \
         [PageSpider.home_url +
-         'lists/womens-clothing.aspx?listName=mens-clothing&cur=' +
-         config.currency + '&pp=32&pp=' + config.pp + '&o=lth&s='+ config.size]
+         'lists/womens-clothing.aspx?listname=mens-clothing&cur=' +
+         config.currency + '&pp=32&pp=' + config.pp + '&o=lth&s='+ (config.size).replace(',','&s=')]
 
