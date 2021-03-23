@@ -1,5 +1,5 @@
 Twisted>=19.2.1
-lxml==4.6.2
+lxml==4.6.3
 pyOpenSSL==18.0.0
 Scrapy==1.7.3
 Jinja2>=2.10.1
