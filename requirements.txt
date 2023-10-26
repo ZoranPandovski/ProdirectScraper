@@ -1,4 +1,4 @@
-Twisted>=19.2.1
+Twisted>=23.10.0rc1
 lxml==4.6.5
 pyOpenSSL==18.0.0
 Scrapy==1.8.2
