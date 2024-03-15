@@ -1,7 +1,7 @@
 Twisted>=19.2.1
 lxml==4.6.5
 pyOpenSSL==18.0.0
-Scrapy==1.8.2
+Scrapy==1.8.4
 Jinja2>=2.10.1
 configparser==3.5.0
 mock==2.0.0
