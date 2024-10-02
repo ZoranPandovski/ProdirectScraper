@@ -5,3 +5,5 @@ Scrapy==1.8.2
 Jinja2>=2.10.1
 configparser==3.5.0
 mock==2.0.0
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
